@@ -1,0 +1,90 @@
+/* Reset default browser margins */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  /* Center everything on the screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* The main container */
+.card {
+  background-color: white;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.card h1 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+/* Grouping the input and button */
+.search-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#input {
+  flex: 1; /* Makes the input take up remaining space */
+  padding: 0.8rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#input:focus {
+  border-color: #e3350d; /* Changes border to red when typing */
+}
+
+#btn {
+  padding: 0.8rem 1.2rem;
+  background-color: #e3350d; /* Pokémon Red */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#btn:hover {
+  background-color: #c92c0a; /* Slightly darker red on hover */
+}
+
+#btn:active {
+  transform: scale(0.96); /* Button click "press" effect */
+}
+
+/* Reserves space for the image so the card doesn't stretch suddenly */
+.image-container {
+  min-height: 150px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pokemon {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  /* Adds a subtle 3D shadow directly to the shape of the sprite */
+  filter: drop-shadow(0 8px 8px rgba(0, 0, 0, 0.2)); 
+}
