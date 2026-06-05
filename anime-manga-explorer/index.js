@@ -29,7 +29,7 @@ async function fetchAnime() {
     <span> | Eps: ${anime.episodes ? anime.episodes : "N/A"}</span>
   </div>
  
-  <a href="${`https://piratexplay.cc/?s=${anime.title}`}" target="_blank" style="color: #00d2ff; text-decoration: none; font-weight: bold;"> CLICK HERE TO WATCH ➔</a>
+  <a href="${`https://piratexplay.cc/?s=${anime.title}`}" target="_blank" style="color: white; text-decoration: none; font-weight: bold;"> CLICK HERE TO WATCH ➔</a>
       `;
 
       ctn.appendChild(animeCard);
