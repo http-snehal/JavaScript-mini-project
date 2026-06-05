@@ -1,0 +1,173 @@
+/* Color Palette Variables for easy management */
+:root {
+  --dust-grey: #D6D6D6;    /* Soft grey for the background */
+  --dust-grey-light: #F0F0F0; /* Lighter grey for cards */
+  --cerulean: #007BA7;     /* Vibrant blue for accents/buttons */
+  --graphite: #2C2C2C;     /* Dark grey/black for text */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'THOD PACHEM', sans-serif;
+  background-color: var(--dust-grey);
+  color: var(--graphite);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  color: var(--graphite);
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: var(--cerulean);
+  font-weight: bold;
+}
+
+/* Search Bar Layout */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#search {
+  flex: 1;
+  padding: 14px 20px;
+  border: 2px solid var(--graphite);
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-family: inherit;
+  background-color: var(--white);
+  color: var(--graphite);
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+#search:focus {
+  border-color: var(--cerulean);
+  box-shadow: 0 0 8px rgba(0, 123, 167, 0.3);
+}
+
+/* Button */
+#btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  background-color: var(--cerulean);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#btn:hover {
+  background-color: #005f82; /* Slightly darker cerulean */
+}
+
+/* Grid layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* THE BOX FIX: Flexbox Card Layout */
+.anime-card {
+  background-color: var(--dust-grey-light);
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Stacks image, title, text, and button vertically */
+}
+
+.anime-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.anime-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--graphite);
+  text-align: center;
+}
+
+.anime-card .meta-info {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--cerulean);
+  margin-bottom: 1rem;
+}
+
+/* Fixes the massive block of text from your screenshot */
+.anime-card .synopsis {
+  font-family: sans-serif; /* A basic font is usually easier to read for long paragraphs */
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+  text-align: left; /* Much easier to read than centered text */
+  flex-grow: 1; /* This pushes the link below it to the very bottom! */
+  margin-bottom: 1.5rem;
+  
+  /* This CSS trick automatically truncates the text after 5 lines with an ellipsis (...) */
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.anime-card a {
+  display: block;
+  text-align: center;
+  background-color: var(--graphite);
+  color: var(--dust-grey-light);
+  padding: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.anime-card a:hover {
+  background-color: var(--cerulean);
+  color: white;
+}
